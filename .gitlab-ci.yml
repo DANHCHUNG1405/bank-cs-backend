@@ -1,0 +1,36 @@
+image: node:latest
+variables:
+  GIT_CLEAN_FLAGS: none
+  GIT_STRATEGY: clone
+stages:
+  - build
+  - deploy
+build_be:
+#  tags:
+#    - smtstg
+  stage: build
+  only:
+    - dev/release
+  script:
+    - unset CI
+    - whoami
+    - echo "start"
+    # - cp -rf .env_dev .env
+    - rsync -av --exclude=.git ./ /storage/data/backend/bank-cs-be/
+    - cd /storage/data/backend/bank-cs-be/
+    - yarn
+    - cp -rf .env_stg .env
+    # - yarn run build
+    - pwd
+deploy_be:
+#  tags:
+#    - smtstg
+  stage: deploy
+  only:
+    - dev/release
+  script:
+    - unset CI
+    - whoami
+    - pm2 list
+    - pm2 restart bank-cs-be
+    - echo "restart services"

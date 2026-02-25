@@ -1,0 +1,77 @@
+const express = require("express");
+
+const usersRouter = require("../src/user/user.routes");
+const chat_roomRouter = require("../src/chat_room/chat_room.routes");
+const messageRouter = require("../src/message/message.routes");
+const notiRouter = require("../src/notifications/noti.routes");
+const user_deviceRouter = require("../src/user_device/user_device.routes");
+const pointRouter = require("../src/point/point.routes");
+const loan_applicationRouter = require("../src/loan_application/loan_application.routes");
+const transactionRouter = require("../src/transaction/transaction.routes");
+const borrower_informationRouter = require("../src/borrower_information/borrower_information.routes");
+const careerRouter = require("../src/career/career.routes");
+const loan_informationRouter = require("../src/loan_information/loan_information.routes");
+const addressRouter = require("../src/address/address.routes");
+const categoryRouter = require("../src/category/category.routes");
+const productRouter = require("../src/product/product.routes");
+const uploadRouter = require("../src/upload/upload.routes");
+const locationRouter = require("../src/location/location.routes");
+const orderRouter = require("../src/order/order.routes");
+const bank_branchRouter = require("../src/bank_branch/bank_branch.routes");
+const likeRouter = require("../src/like/like.routes");
+const bannerRouter = require("../src/banner/banners.routes");
+const bankRouter = require("../src/bank/bank.routes");
+const questionRouter = require("../src/question/question.routes");
+const answer_questionRouter = require("../src/answer_question/answer_question.routes");
+const unlikeRouter = require("../src/unlike/unlike.routes");
+const paymentRouter = require("../src/payment/payment.routes");
+const onepayRouter = require("../src/onepay/onepay.route");
+const investorsRouter = require("../src/investors/investors.routes");
+const fundsRouter = require("../src/funds/funds.routes");
+const loanPackagesRouter = require("../src/loan_packages/loan_packages.routes");
+
+const appotapayRouter = require("../src/appotapay/appotapay.routes");
+const repaymentRouter = require("../src/repayment/repayment.routes");
+const disbursementRouter = require("../src/disbursement/disbursement.routes");
+const complaintRouter = require("../src/complaint/complaint.routes");
+const cicRouter = require("../src/cic/cic.routes");
+
+const router = express.Router();
+
+router.use("/users", usersRouter);
+router.use("/chat_room", chat_roomRouter);
+router.use("/message", messageRouter);
+router.use("/noti", notiRouter);
+router.use("/user_device", user_deviceRouter);
+router.use("/point", pointRouter);
+router.use("/loan_application", loan_applicationRouter);
+router.use("/transaction", transactionRouter);
+router.use("/borrower_information", borrower_informationRouter);
+router.use("/career", careerRouter);
+router.use("/loan_information", loan_informationRouter);
+router.use("/address", addressRouter);
+router.use("/category", categoryRouter);
+router.use("/product", productRouter);
+router.use("/uploads", uploadRouter);
+router.use("/location", locationRouter);
+router.use("/order", orderRouter);
+router.use("/bank_branch", bank_branchRouter);
+router.use("/like", likeRouter);
+router.use("/banner", bannerRouter);
+router.use("/bank", bankRouter);
+router.use("/question", questionRouter);
+router.use("/answer_question", answer_questionRouter);
+router.use("/unlike", unlikeRouter);
+router.use("/payment", paymentRouter);
+router.use("/one_pay", onepayRouter);
+router.use("/investors", investorsRouter);
+router.use("/funds", fundsRouter);
+router.use("/loan_packages", loanPackagesRouter);
+
+router.use("/appotapay", appotapayRouter);
+router.use("/repayment", repaymentRouter);
+router.use("/disbursement", disbursementRouter);
+router.use("/complaint", complaintRouter);
+router.use("/cic", cicRouter);
+
+module.exports = router;

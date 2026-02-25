@@ -1,0 +1,141 @@
+{
+  "development": {
+    "username": "dev",
+    "password": "Smt@2025@",
+    "database": "bank_cs_db",
+    "host": "103.56.160.202",
+    "port": "3306",
+    "dialect": "mysql",
+    "logging": false,
+    "pool": {
+      "max": 10,
+      "min": 0,
+      "acquire": 1000000,
+      "idle": 200000
+    },
+    "dialectOptions": {
+      "dateStrings": true,
+      "typeCast": true
+    },
+    "define": {
+      "freezeTableName": true,
+      "charset": "utf8",
+      "dialectOptions": {
+        "collate": "utf8_general_ci"
+      },
+      "timezone": "+07:00"
+    },
+    "comment": {
+      "desc": "You will get the same kind of objects with multiple environments or you can create one based on your requirement",
+      "process": "just duplicate the development object and set the name as environment name, then that will be used if you set the env value with that name",
+      "Note": "some keys, dialect you've to check with the system you use ( /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */ )",
+      "important": "Properly set the env value, before executing anything and check which env is getting use, then you can check that particular env object if any value is mistaken"
+    }
+  },
+  "dev": {
+    "username": "dev",
+    "password": "Smt@2024",
+    "database": "bank_cs_db",
+    "host": "103.56.160.202",
+    "port": "3306",
+    "dialect": "mysql",
+    "logging": false,
+    "pool": {
+      "max": 10,
+      "min": 0,
+      "acquire": 1000000,
+      "idle": 200000
+    },
+    "dialectOptions": {
+      "dateStrings": true,
+      "typeCast": true
+    },
+    "define": {
+      "freezeTableName": true,
+      "charset": "utf8",
+      "dialectOptions": {
+        "collate": "utf8_general_ci"
+      },
+      "timezone": "+07:00"
+    },
+    "comment": {
+      "desc": "You will get the same kind of objects with multiple environments or you can create one based on your requirement",
+      "process": "just duplicate the development object and set the name as environment name, then that will be used if you set the env value with that name",
+      "Note": "some keys, dialect you've to check with the system you use ( /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */ )",
+      "important": "Properly set the env value, before executing anything and check which env is getting use, then you can check that particular env object if any value is mistaken"
+    }
+  },
+  "stg": {
+    "username": "dev",
+    "password": "Smt@2024",
+    "database": "bank_cs_db",
+    "host": "103.56.160.202",
+    "port": "3306",
+    "dialect": "mysql",
+    "logging": false,
+    "pool": {
+      "max": 10,
+      "min": 0,
+      "acquire": 1000000,
+      "idle": 200000
+    },
+    "dialectOptions": {
+      "dateStrings": true,
+      "typeCast": true
+    },
+    "define": {
+      "freezeTableName": true,
+      "charset": "utf8",
+      "dialectOptions": {
+        "collate": "utf8_general_ci"
+      },
+      "timezone": "+07:00"
+    },
+    "comment": {
+      "desc": "You will get the same kind of objects with multiple environments or you can create one based on your requirement",
+      "process": "just duplicate the development object and set the name as environment name, then that will be used if you set the env value with that name",
+      "Note": "some keys, dialect you've to check with the system you use ( /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */ )",
+      "important": "Properly set the env value, before executing anything and check which env is getting use, then you can check that particular env object if any value is mistaken"
+    }
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": ":memory:",
+    "logging": false
+  },
+  "production": {
+    "username": "dev",
+    "password": "Smt@2025@",
+    "database": "bank_cs_db",
+    "host": "103.56.160.202",
+    "port": "3306",
+    "dialect": "mysql",
+    "logging": true
+  },
+  "onepay": {
+    "domestic": {
+      "paymentGateway": "https://onepay.vn/onecomm-pay/vpc.op",
+      "merchant": "SMILETECH",
+      "accessCode": "HYLEMT5N",
+      "secureSecret": "F71BEA768E5D0C9403B98B1AFD91AAAA"
+    },
+    "international": {
+      "paymentGateway": "https://onepay.vn/vpcpay/vpcpay.op",
+      "merchant": "OP_SMILETECH",
+      "accessCode": "E2011B06",
+      "secureSecret": "AEDD00C08A2A5985256B7DA252FD4326"
+    }
+  },
+  "host": {
+    "server": "https://api.bankcs.smiletech.vn",
+    "host_deeplink": "BankCs://HomeScreen",
+    "api_deeplink": {
+      "loan_application": "loan_application/",
+      "users": "users/",
+      "borrower_information": "borrower_information/",
+      "order": "order/",
+      "socket.io": "socket.io/"
+    },
+    "url": "https://api.bankcs.smiletech.vn"
+  }
+}

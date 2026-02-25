@@ -1,0 +1,94 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "My API",
+        "description": "Document of SmileTech"
+    },
+    "host": "localhost:5656",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "tags": [
+        "User"
+    ],
+    "securityDefinitions": {
+        "apiKeyAuth": {
+        "type": "apiKey",
+        "in": "user/pass",
+        "name": "X-API-KEY",
+        "description": "any description..."
+        }
+    },
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/users/login": { 
+            "post": { 
+                "tags": ["User"],
+                "description": "API đăng nhập tài khoản người dùng",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "user_name": {
+                                    "example": ""
+                                },
+                                "password": {
+                                    "example": ""
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                      "description": "OK"
+                    }
+                }
+            }
+        },
+        "/users/register": {
+            "post": { 
+                "tags": ["User"],
+                "description": "API đăng ký tài khoản người dùng mới",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "full_name": {
+                                    "example": ""
+                                },
+                                "email": {
+                                    "example": ""
+                                }, 
+                                "password": {
+                                    "example": ""
+                                },
+                                "address": {
+                                    "example": ""
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                      "description": "OK"
+                    }
+                }
+            }
+        }
+    }
+}
