@@ -16,7 +16,7 @@ const axios = require('axios');
 models.users.belongsTo(models.address, { foreignKey: 'address_id' });
 models.address.hasOne(models.users, { foreignKey: 'address_id' });
 const admin = require('firebase-admin');
-const serviceAccount = require('../../../smiletech-app-2023-firebase-adminsdk-p8k8d-626e8ecd52.json');
+// const serviceAccount = require('../../../smiletech-app-2023-firebase-adminsdk-p8k8d-626e8ecd52.json');
 const user_deviceService = require('../user_device/user_deviceService');
 const notiService = require('../notifications/notiService');
 const { notiFcm } = require('../../helper/fcm');
@@ -258,12 +258,12 @@ exports.getMyProfile = async (req, res) => {
 }
 
 //register
-if (!admin.apps.length) {
-    admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount),
-        databaseURL: 'https://console.firebase.google.com/u/3/project/smt-technology-group/settings/cloudmessaging' // Thay thế bằng URL của dự án Firebase của bạn
-    });
-};
+// if (!admin.apps.length) {
+//     admin.initializeApp({
+//         credential: admin.credential.cert(serviceAccount),
+//         databaseURL: 'https://console.firebase.google.com/u/3/project/smt-technology-group/settings/cloudmessaging' // Thay thế bằng URL của dự án Firebase của bạn
+//     });
+// };
 // exports.register = async (req, res, next) => {
 //     console.log(req.body);
 //     try {
